@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PETIS — Pet Telemedicine</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="logo">
+        <img src="https://th.bing.com/th/id/R.836317c8a179c9cf1cc105bda116fc74?rik=9pFQUF%2fGcauiCQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpaw-print-png-hd-file-dog-paw-print-png-7115.png&ehk=sk4IiCUurCT0Ip%2b7fmQs4GAKJSIrUm7ZLAVuBc%2b8%2bxI%3d&risl=&pid=ImgRaw&r=0" alt="paw" class="paw">
+        <div>
+          <h1>PETIS</h1>
+          <small>Pet Telemedicine </small>
+        </div>
+      </div>
+      <nav>
+        <button id="btn-home" class="nav-btn">Home</button>
+        <button id="btn-book" class="nav-btn">Book</button>
+        <button id="btn-dashboard" class="nav-btn">Dashboard</button>
+        <button id="btn-doctor" class="nav-btn">Doctor</button>
+        <button id="btn-login" class="nav-btn accent">Login</button>
+      </nav>
+    </header>
+
+    <main id="page" class="page">
+      <!-- content injected by JS -->
+    </main>
+
+    <footer class="footer">
+      <p>PETIS Demo • Cute + Modern Theme • No backend — runs from static files</p>
+    </footer>
+  </div>
+
+  <script src="app.js"> </script>
+  <style>
+    @font-face {
+  font-family: 'InterVar';
+  src: local('Arial');
+}
+:root{
+  --mint:#8EE3B7;
+  --sky:#BDE7FF;
+  --peach:#FFD6A5;
+  --teal:#0F4C5C;
+  --bg:#F7FBF9;
+  --card:#FFFFFF;
+}
+*{box-sizing:border-box;font-family:InterVar, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+body{margin:0;background:linear-gradient(180deg,var(--bg),#ffffff);color:var(--teal);}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:rgba(255,255,255,0.6);backdrop-filter: blur(6px);box-shadow:0 6px 18px rgba(15,76,92,0.06);}
+.logo{display:flex;align-items:center;gap:12px;}
+.logo h1{margin:0;color:var(--teal);letter-spacing:1px;}
+.logo small{display:block;color:#35666b80;font-size:12px;}
+.paw{width:46px;height:46px;}
+.nav-btn{background:transparent;border:0;padding:8px 12px;margin-left:6px;border-radius:12px;cursor:pointer;font-weight:600;color:var(--teal);}
+.nav-btn:hover{transform:translateY(-2px);}
+.accent{background:linear-gradient(90deg,var(--mint),var(--sky));color:#06383a;padding:8px 14px;box-shadow:0 6px 18px rgba(14,76,76,0.08);}
+.page{padding:28px;min-height:70vh;}
+.hero{display:flex;gap:28px;align-items:center;justify-content:space-between;padding:28px;background:linear-gradient(180deg, #ffffff, #fbfffc);border-radius:18px;box-shadow:0 8px 30px rgba(15,76,92,0.04);}
+.hero .left{max-width:58%;}
+.hero h2{font-size:28px;margin:0 0 8px;}
+.cta{display:inline-block;margin-top:12px;padding:12px 18px;border-radius:14px;font-weight:700;cursor:pointer;background:linear-gradient(90deg,var(--mint),var(--peach));}
+.cards{display:flex;gap:18px;margin-top:22px;flex-wrap:wrap;}
+.card{background:var(--card);padding:16px;border-radius:14px;box-shadow:0 10px 25px rgba(15,76,92,0.04);flex:1;min-width:220px;}
+.pet-avatar{width:76px;height:76px;border-radius:16px;object-fit:cover;}
+.small{font-size:13px;color:#35666b80;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px;}
+.section-title{display:flex;justify-content:space-between;align-items:center;}
+.input, .select{padding:10px;border-radius:10px;border:1px solid #e7f3ef;width:100%;margin-top:8px;}
+.btn{padding:10px 14px;border-radius:12px;border:0;cursor:pointer;background:var(--teal);color:#fff;font-weight:700;}
+.footer{padding:18px;text-align:center;color:#35666b80;font-size:13px;}
+.doctor-card{display:flex;gap:12px;align-items:center;}
+.tag{background:var(--peach);padding:6px 10px;border-radius:8px;font-weight:700;color:#5d3b1f;}
+.note{background:#fff7ea;padding:12px;border-radius:10px;margin-top:12px;}
+.video-frame{width:100%;height:70vh;border:0;border-radius:12px;overflow:hidden;}
+@media(max-width:900px){.grid{grid-template-columns:repeat(1,1fr);} .hero{flex-direction:column;align-items:flex-start;} .logo h1{font-size:20px}}
+
+  </style>
+</body>
+</html>
